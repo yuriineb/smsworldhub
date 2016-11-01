@@ -22,7 +22,18 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+swh = Smsworldhub::Sms.new 'token'
+
+Get current balance:
+swh.balance #=> {"rur"=>100.0, "usd"=>0}
+
+Send sms:
+a.send phone_number, 'Message' #=> {"id"=>"67406", "balance"=>{"rur"=>92.6, "usd"=>0}}
+
+Check status sms:
+a.status 67406 #=> {"items"=>[{"id"=>"67406", "status"=>"Delivered"}]}
+
+
 
 ## Development
 
